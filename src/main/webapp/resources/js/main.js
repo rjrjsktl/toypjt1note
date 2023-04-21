@@ -1,4 +1,3 @@
-const notectner = document.getElementById("notectner");
 const checkbtn = document.getElementById("checkbtn");
 const addbox = document.getElementById("addbox");
 
@@ -12,6 +11,19 @@ function viewNote() {
         success: function(ntlist) {
             // addnote
             addbox.innerHTML = "";
+            if (ntlist.length === 0) {
+				const nodataform = document.createElement("form");
+				nodataform.id="0";
+	
+				const noresultinform = document.createElement("div");
+    			noresultinform.classList.add("addinform");
+    			noresultinform.innerText = "No Result";
+    
+    			nodataform.append(noresultinform);
+				addbox.append(nodataform);
+	
+			return;
+			}
             for (let item of ntlist) {
                 // note 추가 div 추가
                 
@@ -161,9 +173,6 @@ function passNote(num) {
     console.log("start")
     window.setInterval(viewNote(), 1000000000000)})
     ();
-
-
-
 
 const nowtm = document.getElementById("nowtm");
 
