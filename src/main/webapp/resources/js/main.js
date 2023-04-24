@@ -269,9 +269,38 @@ function clickUpdateBtn() {
     })
 };
 
-
-  
-
+/*
+window.addEventListener('load', async () => {
+    const sltselect = document.querySelector('#sltsearch');
+    
+    try {
+      const response = await fetch('/options');
+      const options = await response.json();
+      
+      for (const option of options) {
+        const element = document.createElement('option');
+        element.value = option.value;
+        element.textContent = option.label;
+        sltselect.appendChild(element);
+      }
+    } catch (error) {
+      console.error(error);
+    }
+});
+function gosltsearch() {
+	const sltselect = document.querySelector('#sltsearch');
+    const option = sltselect.options[sltselect.selectedIndex].value;
+    
+    if (option === 'edited') {
+      // 최근 수정 순으로 정렬
+    } else if (option === 'created') {
+      // 최근 생성 순으로 정렬
+    } else if (option === 'alphabetical') {
+      // 알파벳 순으로 정렬
+    }
+    
+}
+*/
 
 /* 피티형의 도움
 입력한 검색어에 해당하는 노트만 보여주는 기능을 추가하려면 다음과 같은 방법을 사용할 수 있습니다.

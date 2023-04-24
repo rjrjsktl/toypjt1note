@@ -34,7 +34,7 @@
                     <!-- back 버튼 등 기능 단 -->
                     <input type="text" id="search" class="search" name="search" placeholder="Search" maxlength="30"
                             autocomplete="off" required>
-                    <select name="sltsearch" class="sltsearch">
+                    <select name="sltsearch" id="sltsearch" class="sltsearch" onclick="gosltsearch()">
                         <option value="edited">Sort by Last Edited</option>
                         <option value="created">Sort by Recently created</option>
                         <option value="alphabetical">Sort by Alphabetical</option>
